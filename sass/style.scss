@@ -1,0 +1,20 @@
+.mycolor {
+  color: #000;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+
+.content {
+  opacity:0;
+  transition: opacity 1s ease-in;
+}
+
+.loaded {
+  opacity:1;
+}
+
+#crossed {
+  text-decoration:line-through;
+}
