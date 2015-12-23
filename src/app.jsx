@@ -34,8 +34,8 @@ var App = React.createClass({
           <List items={this.state.items} />
             {this.deleteButton()}
 
+            </div>
           </div>
-        </div>
         </div>
   },
   deleteButton: function() {
@@ -47,7 +47,8 @@ var App = React.createClass({
         <button
           type="button"
           onClick={this.onDeleteDoneClick}
-          className="btn btn-default">
+          className="btn btn-default"
+          >
             Clear Complete
           </button>
       </div>
@@ -55,8 +56,8 @@ var App = React.createClass({
   },
   onDeleteDoneClick: function() {
     for(var key in this.state.items) {
-      if(this.state.items[key].done === true) {
-        this.fb.child(key).remove();
+      if(this.state.items[key].done == true) {
+      this.fb.child(this.state.items[key]['.key']).remove();
       }
     }
   },
